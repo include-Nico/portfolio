@@ -1,0 +1,126 @@
+:root {
+    --bg-color: #0f172a;
+    --accent-color: #3b82f6;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo { font-weight: 800; font-size: 1.5rem; }
+.logo span { color: var(--accent-color); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 2rem; }
+nav ul li a { 
+    text-decoration: none; 
+    color: var(--text-secondary); 
+    transition: 0.3s;
+}
+nav ul li a:hover { color: var(--accent-color); }
+
+/* Header */
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+}
+
+.profile-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+h1 { font-size: 4rem; margin-bottom: 0.5rem; }
+.subtitle { color: var(--accent-color); font-weight: 600; font-size: 1.2rem; margin-bottom: 2rem; }
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+
+.btn.primary { background: var(--accent-color); color: white; }
+.btn.secondary { border: 1px solid var(--accent-color); color: var(--accent-color); }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
+
+/* Glass Sections */
+.glass-section {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(15px);
+    margin: 4rem 10%;
+    padding: 3rem;
+    border-radius: 24px;
+}
+
+.section-title { font-size: 2rem; margin-bottom: 2rem; text-align: center; }
+
+/* Timeline */
+.timeline-item {
+    border-left: 2px solid var(--accent-color);
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.date { color: var(--accent-color); font-size: 0.9rem; font-weight: bold; }
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: var(--glass-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid var(--glass-border);
+    transition: 0.3s;
+}
+
+.skill-card:hover { background: rgba(255, 255, 255, 0.08); }
+
+footer { text-align: center; padding: 4rem; color: var(--text-secondary); font-size: 0.9rem; }
