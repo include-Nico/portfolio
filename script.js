@@ -148,9 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ────────────────────────────────────────
        6. EDUCATION — EXPANDABLE CARDS
     ──────────────────────────────────────── */
-    document.querySelectorAll('.edu-expand-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const card = btn.closest('.edu-card');
+    // Ora l'intero header della card risponde al click per un'esperienza touch migliore
+    document.querySelectorAll('.edu-card-main').forEach(mainCard => {
+        mainCard.addEventListener('click', () => {
+            const card = mainCard.closest('.edu-card');
             card.classList.toggle('expanded');
         });
     });
