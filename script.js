@@ -1,9 +1,5 @@
-// Effetto di comparsa graduale (Reveal) delle sezioni
 document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = {
-        threshold: 0.1
-    };
-
+    // Animazione entrata sezioni
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -11,23 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.style.transform = "translateY(0)";
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    // Selezioniamo le sezioni da animare
-    const sections = document.querySelectorAll('.glass-section, .skill-card');
-    sections.forEach(section => {
+    document.querySelectorAll('.glass-section').forEach(section => {
         section.style.opacity = "0";
-        section.style.transform = "translateY(30px)";
-        section.style.transition = "all 0.8s ease-out";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "all 0.6s ease-out";
         observer.observe(section);
     });
-});
 
-// Smooth scroll per i link della navbar
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const section = document.querySelector(this.getAttribute('href'));
-        section.scrollIntoView({ behavior: 'smooth' });
-    });
+    // Log per debug (opzionale)
+    console.log("Portfolio di Nicolò caricato con successo.");
 });
