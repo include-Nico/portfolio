@@ -11,29 +11,21 @@
 </head>
 <body>
 
-<!-- Noise overlay -->
 <div class="noise"></div>
-<!-- Scanlines overlay -->
 <div class="scanlines"></div>
-
-<!-- Canvas background -->
 <canvas id="bg-canvas"></canvas>
 
 <!-- NAV -->
 <nav id="main-nav">
-    <div class="logo">
-        <span class="logo-bracket">[</span>NT<span class="logo-dot">;</span><span class="logo-bracket">]</span>
-    </div>
+    <div class="logo"><span class="logo-bracket">[</span>NT<span class="logo-dot">;</span><span class="logo-bracket">]</span></div>
     <ul>
         <li><a href="#about"><span class="nav-num">01.</span>Profilo</a></li>
         <li><a href="#experience"><span class="nav-num">02.</span>Esperienze</a></li>
         <li><a href="#education"><span class="nav-num">03.</span>Formazione</a></li>
-        <li><a href="#skills"><span class="nav-num">04.</span>Competenze</a></li>
+        <li><a href="#projects"><span class="nav-num">04.</span>Progetti</a></li>
+        <li><a href="#skills"><span class="nav-num">05.</span>Competenze</a></li>
     </ul>
-    <div class="nav-status">
-        <span class="status-dot"></span>
-        <span class="status-text">Available</span>
-    </div>
+    <div class="nav-status"><span class="status-dot"></span><span class="status-text">Available</span></div>
 </nav>
 
 <!-- HERO -->
@@ -42,30 +34,13 @@
         <div class="hero-left">
             <div class="hero-tag">// Computer Engineering Student</div>
             <h1 class="glitch" data-text="Nicolò Troiano">Nicolò Troiano</h1>
-            <p class="hero-sub">
-                <span class="typewriter" id="typewriter"></span>
-                <span class="cursor">█</span>
-            </p>
+            <p class="hero-sub"><span class="typewriter" id="typewriter"></span><span class="cursor">█</span></p>
             <div class="hero-contact">
-                <div class="contact-line">
-                    <span class="cl-key">location</span>
-                    <span class="cl-eq">=</span>
-                    <span class="cl-val">"Via Val D'Ossola 19, Milano"</span>
-                </div>
-                <div class="contact-line">
-                    <span class="cl-key">phone</span>
-                    <span class="cl-eq">=</span>
-                    <span class="cl-val">"+39 333 826 4243"</span>
-                </div>
-                <div class="contact-line">
-                    <span class="cl-key">email</span>
-                    <span class="cl-eq">=</span>
-                    <span class="cl-val">"Niky.triano@gmail.com"</span>
-                </div>
+                <div class="contact-line"><span class="cl-key">location</span><span class="cl-eq">=</span><span class="cl-val">"Via Val D'Ossola 19, Milano"</span></div>
+                <div class="contact-line"><span class="cl-key">phone</span><span class="cl-eq">=</span><span class="cl-val">"+39 333 826 4243"</span></div>
+                <div class="contact-line"><span class="cl-key">email</span><span class="cl-eq">=</span><span class="cl-val">"Niky.triano@gmail.com"</span></div>
             </div>
-            <p class="hero-desc">
-                Studente al secondo anno con spiccate doti di <em>problem solving</em> e gestione del cliente, maturate in contesti di alta pressione. Serio, responsabile e abituato a lavorare per obiettivi.
-            </p>
+            <p class="hero-desc">Studente al secondo anno con spiccate doti di <em>problem solving</em> e gestione del cliente, maturate in contesti di alta pressione. Serio, responsabile e abituato a lavorare per obiettivi.</p>
             <div class="hero-cta">
                 <a href="#experience" class="btn-primary">Esplora il profilo <i class="fas fa-arrow-down"></i></a>
                 <a href="mailto:Niky.triano@gmail.com" class="btn-ghost">Contattami</a>
@@ -86,13 +61,12 @@
             </div>
         </div>
     </div>
-    <div class="scroll-indicator">
-        <span>scroll</span>
-        <div class="scroll-line"></div>
-    </div>
+    <div class="scroll-indicator"><span>scroll</span><div class="scroll-line"></div></div>
 </header>
 
-<!-- EXPERIENCE -->
+<!-- ══════════════════════════════
+     EXPERIENCE — ACCORDION
+══════════════════════════════ -->
 <section id="experience">
     <div class="section-header">
         <span class="section-num">02</span>
@@ -100,82 +74,122 @@
         <div class="section-line"></div>
     </div>
 
-    <div class="git-log">
-        <!-- Item 1 -->
-        <div class="commit-item" data-aos>
-            <div class="commit-left">
-                <div class="commit-dot active"></div>
-                <div class="commit-line"></div>
+    <div class="accordion" id="exp-accordion">
+
+        <div class="acc-item open">
+            <div class="acc-trigger">
+                <div class="acc-trigger-left">
+                    <div class="acc-node active"></div>
+                    <div class="acc-meta">
+                        <div class="acc-top-row">
+                            <span class="acc-hash">a3f9b12</span>
+                            <span class="acc-branch"><i class="fas fa-code-branch"></i> main</span>
+                            <span class="acc-date">Presente</span>
+                        </div>
+                        <h3 class="acc-title">Co-host Appartamento</h3>
+                    </div>
+                </div>
+                <div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
             </div>
-            <div class="commit-body">
-                <div class="commit-header">
-                    <span class="commit-hash">a3f9b12</span>
-                    <span class="commit-branch"><i class="fas fa-code-branch"></i> main</span>
-                    <span class="commit-date">Presente</span>
-                </div>
-                <h3 class="commit-title">Co-host Appartamento</h3>
-                <div class="commit-desc">
-                    <div class="diff-line add">+ Gestione procedure di check-in e accoglienza clienti.</div>
-                    <div class="diff-line add">+ Risoluzione tempestiva di problemi logistici e manutentivi.</div>
-                </div>
-                <div class="commit-tags">
-                    <span class="tag">Customer Relations</span>
-                    <span class="tag">Problem Solving</span>
+            <div class="acc-body">
+                <div class="acc-body-inner">
+                    <p class="acc-prose">
+                        Gestisco in autonomia l'intero ciclo di ospitalità di un appartamento in affitto breve a Milano: dal primo contatto con i potenziali ospiti, alla gestione dei pagamenti e delle prenotazioni, fino alla cura delle recensioni post-soggiorno. Il ruolo mi ha insegnato a comunicare in modo chiaro e rassicurante anche sotto pressione — guasti notturni, emergenze dell'ultimo minuto, esigenze particolari degli ospiti — trasformando ogni criticità in un'opportunità per migliorare la reputazione della struttura e fidelizzare i clienti.
+                    </p>
+                    <div class="acc-learned">
+                        <div class="al-header"><i class="fas fa-lightbulb"></i> Cosa ho sviluppato</div>
+                        <ul>
+                            <li>Comunicazione professionale e personalizzata con clienti internazionali</li>
+                            <li>Gestione autonoma di problemi logistici e manutentivi in tempi rapidi</li>
+                            <li>Ottimizzazione dell'esperienza ospite per massimizzare le recensioni positive</li>
+                            <li>Responsabilità economica e organizzativa su una risorsa immobiliare</li>
+                        </ul>
+                    </div>
+                    <div class="acc-tags">
+                        <span class="tag">Customer Relations</span><span class="tag">Problem Solving</span><span class="tag">Autonomia</span><span class="tag">Gestione Risorse</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Item 2 -->
-        <div class="commit-item" data-aos>
-            <div class="commit-left">
-                <div class="commit-dot"></div>
-                <div class="commit-line"></div>
+        <div class="acc-item">
+            <div class="acc-trigger">
+                <div class="acc-trigger-left">
+                    <div class="acc-node"></div>
+                    <div class="acc-meta">
+                        <div class="acc-top-row">
+                            <span class="acc-hash">7c2d8e1</span>
+                            <span class="acc-branch"><i class="fas fa-code-branch"></i> security</span>
+                            <span class="acc-date">2023 → Presente</span>
+                        </div>
+                        <h3 class="acc-title">Addetto alla Sicurezza — Fashion Week <span class="acc-company">Agenzia Mib</span></h3>
+                    </div>
+                </div>
+                <div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
             </div>
-            <div class="commit-body">
-                <div class="commit-header">
-                    <span class="commit-hash">7c2d8e1</span>
-                    <span class="commit-branch"><i class="fas fa-code-branch"></i> security</span>
-                    <span class="commit-date">2023 → Presente</span>
-                </div>
-                <h3 class="commit-title">Addetto alla Sicurezza — Fashion Week <small>(Agenzia Mib)</small></h3>
-                <div class="commit-desc">
-                    <div class="diff-line add">+ Controllo accessi e gestione flussi ad alto volume.</div>
-                    <div class="diff-line add">+ Monitoraggio sicurezza e risposta rapida alle emergenze.</div>
-                    <div class="diff-line add">+ Collaborazione con forze dell'ordine.</div>
-                </div>
-                <div class="commit-tags">
-                    <span class="tag">Alta Pressione</span>
-                    <span class="tag">Team Work</span>
-                    <span class="tag">Gestione Flussi</span>
+            <div class="acc-body">
+                <div class="acc-body-inner">
+                    <p class="acc-prose">
+                        Opero per l'Agenzia Mib durante la Milano Fashion Week, uno degli eventi più complessi e mediaticamente rilevanti in Italia. Il contesto è estremamente esigente: migliaia di persone, VIP, media internazionali e scale temporali rigidissime. Mi occupo del controllo accessi e della gestione dei flussi pedonali, collaborando attivamente con le forze dell'ordine e con i coordinatori dell'evento. Ho imparato che la sicurezza non è solo vigilanza fisica, ma soprattutto lettura preventiva della situazione, comunicazione di squadra e capacità di restare lucido quando tutto intorno si muove velocemente.
+                    </p>
+                    <div class="acc-learned">
+                        <div class="al-header"><i class="fas fa-lightbulb"></i> Cosa ho sviluppato</div>
+                        <ul>
+                            <li>Resilienza e lucidità in ambienti ad altissima pressione e imprevedibilità</li>
+                            <li>Coordinamento con team eterogenei: security, polizia, organizzatori</li>
+                            <li>Lettura anticipatoria dei flussi e gestione delle criticità in tempo reale</li>
+                            <li>Rigore procedurale unito a flessibilità decisionale nel momento critico</li>
+                        </ul>
+                    </div>
+                    <div class="acc-tags">
+                        <span class="tag">Alta Pressione</span><span class="tag">Team Work</span><span class="tag">Gestione Flussi</span><span class="tag">Resilienza</span><span class="tag">Coordinamento</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Item 3 -->
-        <div class="commit-item" data-aos>
-            <div class="commit-left">
-                <div class="commit-dot"></div>
+        <div class="acc-item">
+            <div class="acc-trigger">
+                <div class="acc-trigger-left">
+                    <div class="acc-node"></div>
+                    <div class="acc-meta">
+                        <div class="acc-top-row">
+                            <span class="acc-hash">1b5f3a9</span>
+                            <span class="acc-branch"><i class="fas fa-code-branch"></i> security</span>
+                            <span class="acc-date">2021 → 2023</span>
+                        </div>
+                        <h3 class="acc-title">Agente Anti-taccheggio <span class="acc-company">Agenzia R.A.D.A.R.</span></h3>
+                    </div>
+                </div>
+                <div class="acc-chevron"><i class="fas fa-chevron-down"></i></div>
             </div>
-            <div class="commit-body">
-                <div class="commit-header">
-                    <span class="commit-hash">1b5f3a9</span>
-                    <span class="commit-branch"><i class="fas fa-code-branch"></i> security</span>
-                    <span class="commit-date">2021 → 2023</span>
-                </div>
-                <h3 class="commit-title">Agente Anti-taccheggio <small>(Agenzia R.A.D.A.R.)</small></h3>
-                <div class="commit-desc">
-                    <div class="diff-line add">+ Vigilanza e prevenzione furti presso Pam e IN's.</div>
-                </div>
-                <div class="commit-tags">
-                    <span class="tag">Vigilanza</span>
-                    <span class="tag">Prevenzione</span>
+            <div class="acc-body">
+                <div class="acc-body-inner">
+                    <p class="acc-prose">
+                        Per due anni ho operato come agente anti-taccheggio presso i punti vendita Pam e IN's a Milano. Il lavoro richiede una forma particolare di intelligenza situazionale: osservare senza farsi notare, leggere i comportamenti anomali in mezzo al rumore di fondo di una giornata normale, e intervenire solo quando strettamente necessario, sempre nel rispetto delle procedure legali e della dignità delle persone. Ho imparato la pazienza, la concentrazione prolungata su turni lunghi e la capacità di agire in modo deciso ma composto nel momento giusto.
+                    </p>
+                    <div class="acc-learned">
+                        <div class="al-header"><i class="fas fa-lightbulb"></i> Cosa ho sviluppato</div>
+                        <ul>
+                            <li>Osservazione analitica e lettura comportamentale in contesti affollati</li>
+                            <li>Pazienza e concentrazione sostenuta per turni prolungati</li>
+                            <li>Gestione discreta e deescalation di situazioni potenzialmente conflittuali</li>
+                            <li>Conoscenza pratica delle procedure legali di intervento e responsabilità civile</li>
+                        </ul>
+                    </div>
+                    <div class="acc-tags">
+                        <span class="tag">Vigilanza</span><span class="tag">Osservazione Analitica</span><span class="tag">Deescalation</span><span class="tag">Procedure Legali</span>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
-<!-- EDUCATION -->
+<!-- ══════════════════════════════
+     EDUCATION — EXPANDABLE
+══════════════════════════════ -->
 <section id="education">
     <div class="section-header">
         <span class="section-num">03</span>
@@ -184,75 +198,172 @@
     </div>
 
     <div class="edu-grid">
+
         <div class="edu-card primary" data-aos>
-            <div class="edu-card-inner">
-                <div class="edu-icon">
-                    <i class="fas fa-microchip"></i>
-                </div>
+            <div class="edu-card-main">
+                <div class="edu-icon"><i class="fas fa-microchip"></i></div>
                 <div class="edu-year">2024 → in corso</div>
                 <h3>Ingegneria Informatica</h3>
                 <p>Politecnico di Milano</p>
-                <div class="edu-bar">
-                    <div class="edu-bar-fill" style="--w:40%"></div>
-                </div>
+                <div class="edu-bar"><div class="edu-bar-fill" style="--w:40%"></div></div>
                 <span class="edu-bar-label">2° Anno</span>
+                <button class="edu-expand-btn">Cosa mi sta lasciando <i class="fas fa-chevron-down"></i></button>
             </div>
-            <div class="edu-card-glow"></div>
-        </div>
-
-        <div class="edu-card" data-aos>
-            <div class="edu-card-inner">
-                <div class="edu-icon">
-                    <i class="fas fa-flask"></i>
-                </div>
-                <div class="edu-year">Diploma</div>
-                <h3>Liceo Scientifico</h3>
-                <p>Scienze Applicate — IIS L. Galvani, Milano</p>
-            </div>
-            <div class="edu-card-glow"></div>
-        </div>
-
-        <div class="edu-card" data-aos>
-            <div class="edu-card-inner">
-                <div class="edu-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <div class="edu-year">Certificazioni</div>
-                <h3>Qualifiche</h3>
-                <ul class="cert-list">
-                    <li><i class="fas fa-check"></i> Inglese B1 — Linguaviva</li>
-                    <li><i class="fas fa-check"></i> BLS & DAE (2023)</li>
-                    <li><i class="fas fa-check"></i> PCTO Giovani & Impresa</li>
+            <div class="edu-expand-body">
+                <p>Il Politecnico mi sta formando come pensatore computazionale prima ancora che come programmatore. Il rigore dei corsi di Analisi, Algebra e Fisica mi ha allenato ad affrontare problemi che sembrano irrisolvibili con metodo e perseveranza. Lo studio dell'architettura dei calcolatori e dei fondamenti dell'informatica mi ha dato una visione profonda di come funziona la macchina sotto il livello dell'astrazione.</p>
+                <ul class="edu-takeaways">
+                    <li><i class="fas fa-angle-right"></i> Pensiero algoritmico e approccio sistematico alla risoluzione dei problemi</li>
+                    <li><i class="fas fa-angle-right"></i> Programmazione in C e Java con attenzione alle performance e alla correttezza</li>
+                    <li><i class="fas fa-angle-right"></i> Metodo di studio ad alta intensità sotto la pressione degli esami</li>
+                    <li><i class="fas fa-angle-right"></i> Lavoro in team su progetti universitari con scadenze rigide</li>
                 </ul>
             </div>
             <div class="edu-card-glow"></div>
         </div>
+
+        <div class="edu-card" data-aos>
+            <div class="edu-card-main">
+                <div class="edu-icon"><i class="fas fa-flask"></i></div>
+                <div class="edu-year">Diploma</div>
+                <h3>Liceo Scientifico</h3>
+                <p>Scienze Applicate — IIS L. Galvani, Milano</p>
+                <button class="edu-expand-btn">Cosa mi ha lasciato <i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="edu-expand-body">
+                <p>Il liceo scientifico con indirizzo Scienze Applicate mi ha fornito una base solida nel ragionamento ipotetico-deduttivo e nel metodo sperimentale. Ho sviluppato la capacità di costruire argomenti strutturati e di mettere in discussione le assunzioni di partenza — un'abitudine mentale fondamentale per chi poi si occuperà di debugging e progettazione di sistemi.</p>
+                <ul class="edu-takeaways">
+                    <li><i class="fas fa-angle-right"></i> Metodo scientifico e pensiero critico come strumenti quotidiani</li>
+                    <li><i class="fas fa-angle-right"></i> Matematica e fisica come linguaggi per descrivere il reale</li>
+                    <li><i class="fas fa-angle-right"></i> Prima esposizione significativa alla programmazione e all'informatica</li>
+                    <li><i class="fas fa-angle-right"></i> Capacità di sintetizzare e comunicare grandi quantità di informazioni</li>
+                </ul>
+            </div>
+            <div class="edu-card-glow"></div>
+        </div>
+
+        <div class="edu-card" data-aos>
+            <div class="edu-card-main">
+                <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+                <div class="edu-year">Certificazioni</div>
+                <h3>Qualifiche Extra</h3>
+                <ul class="cert-list-preview">
+                    <li><i class="fas fa-check"></i> Inglese B1 — Linguaviva</li>
+                    <li><i class="fas fa-check"></i> BLS & DAE (2023)</li>
+                    <li><i class="fas fa-check"></i> PCTO Giovani & Impresa</li>
+                </ul>
+                <button class="edu-expand-btn">Cosa mi ha lasciato <i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="edu-expand-body">
+                <p>Ogni certificazione ha rappresentato uno step fuori dalla zona di comfort. Il corso BLS e DAE mi ha insegnato che in situazioni di emergenza la preparazione tecnica è necessaria ma non sufficiente: è la gestione emotiva la vera variabile. Il percorso PCTO Giovani & Impresa mi ha dato una prima finestra concreta sul mondo del lavoro e della gestione d'impresa.</p>
+                <ul class="edu-takeaways">
+                    <li><i class="fas fa-angle-right"></i> Inglese B1: comunicazione scritta e orale in contesti formali e informali</li>
+                    <li><i class="fas fa-angle-right"></i> BLS/DAE: primo soccorso, gestione del panico, coordinamento in emergenza</li>
+                    <li><i class="fas fa-angle-right"></i> PCTO: visione d'insieme dei processi aziendali e del mercato del lavoro</li>
+                    <li><i class="fas fa-angle-right"></i> Abitudine a strutturare l'apprendimento in percorsi certificabili e misurabili</li>
+                </ul>
+            </div>
+            <div class="edu-card-glow"></div>
+        </div>
+
     </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
+<!-- ══════════════════════════════
+     PROJECTS — GITHUB + ALTRI
+══════════════════════════════ -->
+<section id="projects">
     <div class="section-header">
         <span class="section-num">04</span>
+        <h2>Progetti<span class="accent">.</span></h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="gh-banner" data-aos>
+        <div class="gh-banner-left">
+            <i class="fab fa-github gh-icon"></i>
+            <div>
+                <div class="gh-label">GitHub</div>
+                <div class="gh-username" id="gh-username">caricamento...</div>
+            </div>
+        </div>
+        <div class="gh-stats" id="gh-stats">
+            <div class="gh-stat"><span id="gh-repos">—</span><small>repos</small></div>
+            <div class="gh-stat"><span id="gh-followers">—</span><small>followers</small></div>
+            <div class="gh-stat"><span id="gh-following">—</span><small>following</small></div>
+        </div>
+        <a id="gh-profile-link" href="#" target="_blank" class="btn-ghost gh-btn">Visita profilo <i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    <h3 class="sub-heading"><span class="accent">// </span>Repository recenti</h3>
+    <div class="repos-grid" id="repos-grid">
+        <div class="repo-skeleton"></div>
+        <div class="repo-skeleton"></div>
+        <div class="repo-skeleton"></div>
+    </div>
+
+    <h3 class="sub-heading" style="margin-top:3.5rem"><span class="accent">// </span>Altri progetti</h3>
+    <div class="other-projects-grid">
+
+        <div class="proj-card" data-aos>
+            <div class="proj-top">
+                <i class="fas fa-folder-open proj-folder"></i>
+                <div class="proj-links">
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" title="Demo"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <h4>Algoritmi &amp; Strutture Dati — C</h4>
+            <p>Implementazione di strutture dati avanzate (grafi, heap, BST) e algoritmi di ordinamento con analisi della complessità computazionale. Progetto universitario Polimi.</p>
+            <div class="proj-techs"><span>C</span><span>Algoritmi</span><span>Polimi</span></div>
+        </div>
+
+        <div class="proj-card" data-aos>
+            <div class="proj-top">
+                <i class="fas fa-folder-open proj-folder"></i>
+                <div class="proj-links">
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <h4>Portfolio Personale</h4>
+            <p>Questo stesso sito — progettato e sviluppato da zero con grafica immersiva, animazioni canvas, architettura CSS custom e nessun framework esterno.</p>
+            <div class="proj-techs"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </div>
+
+        <div class="proj-card" data-aos>
+            <div class="proj-top">
+                <i class="fas fa-folder-open proj-folder"></i>
+                <div class="proj-links">
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <h4>Tool di Automazione Python</h4>
+            <p>Script di utility personali: scraping, gestione e rinomina massiva di file, automazione di workflow ripetitivi. Primo approccio pratico a Python fuori dall'ambito universitario.</p>
+            <div class="proj-techs"><span>Python</span><span>Automazione</span><span>Scripting</span></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ══════════════════════════════
+     SKILLS
+══════════════════════════════ -->
+<section id="skills">
+    <div class="section-header">
+        <span class="section-num">05</span>
         <h2>Competenze<span class="accent">.</span></h2>
         <div class="section-line"></div>
     </div>
 
     <div class="skills-layout">
-        <!-- Terminal panel -->
         <div class="terminal-panel" data-aos>
             <div class="terminal-titlebar">
                 <div class="t-btn t-close"></div>
                 <div class="t-btn t-min"></div>
                 <div class="t-btn t-max"></div>
-                <span class="t-title">nicolo@polimi:~$ skills</span>
+                <span class="t-title">nicolo@polimi:~$ skills --list</span>
             </div>
-            <div class="terminal-body" id="terminal-body">
-                <!-- JS will animate this -->
-            </div>
+            <div class="terminal-body" id="terminal-body"></div>
         </div>
-
-        <!-- Hex skills grid -->
         <div class="hex-skills" data-aos>
             <div class="hex-row">
                 <div class="hex-cell" style="--clr:#f89820"><span><i class="fab fa-java"></i><br>Java</span></div>
@@ -260,7 +371,7 @@
                 <div class="hex-cell" style="--clr:#f7df1e"><span><i class="fab fa-js-square"></i><br>JavaScript</span></div>
             </div>
             <div class="hex-row offset">
-                <div class="hex-cell" style="--clr:#555555"><span><i class="fas fa-copyright"></i><br>C</span></div>
+                <div class="hex-cell" style="--clr:#a8b9cc"><span><i class="fas fa-copyright"></i><br>C</span></div>
                 <div class="hex-cell" style="--clr:#e34c26"><span><i class="fab fa-html5"></i><br>HTML</span></div>
                 <div class="hex-cell" style="--clr:#1572b6"><span><i class="fab fa-css3-alt"></i><br>CSS</span></div>
             </div>
@@ -272,62 +383,58 @@
         </div>
     </div>
 
-    <!-- Language bars -->
+    <!-- LANGUAGE BARS -->
     <div class="lang-section" data-aos>
         <h3 class="lang-title"><span class="accent">// </span>Lingue</h3>
         <div class="lang-bars">
             <div class="lang-bar-item">
-                <div class="lang-info">
-                    <span class="lang-name">Italiano</span>
-                    <span class="lang-level">Madrelingua</span>
-                </div>
+                <div class="lang-info"><span class="lang-name">Italiano</span><span class="lang-level">Madrelingua</span></div>
                 <div class="lang-track">
                     <div class="lang-fill" style="--w:100%"></div>
-                    <div class="lang-markers">
-                        <span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span>
-                    </div>
+                    <div class="lang-markers"><span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span></div>
                 </div>
             </div>
             <div class="lang-bar-item">
-                <div class="lang-info">
-                    <span class="lang-name">Inglese</span>
-                    <span class="lang-level">B1</span>
-                </div>
+                <div class="lang-info"><span class="lang-name">Inglese</span><span class="lang-level">B1</span></div>
                 <div class="lang-track">
                     <div class="lang-fill" style="--w:50%"></div>
-                    <div class="lang-markers">
-                        <span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span>
-                    </div>
+                    <div class="lang-markers"><span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span></div>
                 </div>
             </div>
             <div class="lang-bar-item">
-                <div class="lang-info">
-                    <span class="lang-name">Spagnolo</span>
-                    <span class="lang-level">Base</span>
-                </div>
+                <div class="lang-info"><span class="lang-name">Spagnolo</span><span class="lang-level">A2</span></div>
                 <div class="lang-track">
-                    <div class="lang-fill" style="--w:20%"></div>
-                    <div class="lang-markers">
-                        <span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span>
-                    </div>
+                    <div class="lang-fill" style="--w:30%"></div>
+                    <div class="lang-markers"><span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Soft skills pills -->
-    <div class="soft-skills" data-aos>
-        <h3 class="lang-title"><span class="accent">// </span>Soft Skills & Altro</h3>
-        <div class="pills">
-            <span class="pill"><i class="fas fa-brain"></i> Problem Solving</span>
-            <span class="pill"><i class="fas fa-users"></i> Gestione Flussi</span>
-            <span class="pill"><i class="fas fa-shield-alt"></i> Security Awareness</span>
-            <span class="pill"><i class="fas fa-motorcycle"></i> Patente A2</span>
-            <span class="pill"><i class="fas fa-heartbeat"></i> BLS & DAE</span>
-            <span class="pill"><i class="fas fa-bullseye"></i> Goal Oriented</span>
-            <span class="pill"><i class="fas fa-handshake"></i> Customer Care</span>
+    <!-- SOFT SKILLS — RADAR -->
+    <div class="soft-section" data-aos>
+        <h3 class="lang-title"><span class="accent">// </span>Soft Skills</h3>
+        <div class="soft-layout">
+            <div class="radar-wrapper">
+                <canvas id="radar-canvas" width="380" height="380"></canvas>
+                <div class="radar-tooltip" id="radar-tooltip"></div>
+            </div>
+            <div class="soft-right">
+                <div class="radar-legend" id="radar-legend"></div>
+                <div class="pills">
+                    <span class="pill"><i class="fas fa-brain"></i> Problem Solving</span>
+                    <span class="pill"><i class="fas fa-users"></i> Gestione Flussi</span>
+                    <span class="pill"><i class="fas fa-shield-alt"></i> Security Mindset</span>
+                    <span class="pill"><i class="fas fa-motorcycle"></i> Patente A2</span>
+                    <span class="pill"><i class="fas fa-heartbeat"></i> BLS &amp; DAE</span>
+                    <span class="pill"><i class="fas fa-bullseye"></i> Goal Oriented</span>
+                    <span class="pill"><i class="fas fa-handshake"></i> Customer Care</span>
+                    <span class="pill"><i class="fas fa-expand-arrows-alt"></i> Adattabilità</span>
+                </div>
+            </div>
         </div>
     </div>
+
 </section>
 
 <!-- FOOTER -->
@@ -336,11 +443,11 @@
         <div class="footer-logo">NT<span class="accent">;</span></div>
         <div class="footer-links">
             <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
             <a href="mailto:Niky.triano@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="footer-copy">© 2024 Nicolò Troiano — <span class="accent">Autorizzo il trattamento dei dati personali (GDPR)</span></p>
+        <p class="footer-copy">© 2025 Nicolò Troiano — <span class="accent">Autorizzo il trattamento dei dati personali (GDPR)</span></p>
     </div>
 </footer>
 
