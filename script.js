@@ -5,7 +5,7 @@
 /* ╔══════════════════════════════════════╗
    ║  CONFIG — change your GitHub handle  ║
    ╚══════════════════════════════════════╝ */
-const GITHUB_USERNAME = 'nicolo-troiano'; // ← sostituisci col tuo username
+const GITHUB_USERNAME = 'include-Nico'; // ← Username aggiornato!
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ).forEach(el => io.observe(el));
 
     /* ────────────────────────────────────────
-       5. ACCORDION — EXPERIENCE
+       5. ACCORDION — EXPERIENCE (Hover & Click)
     ──────────────────────────────────────── */
     document.querySelectorAll('.acc-trigger').forEach(trigger => {
         trigger.addEventListener('click', () => {
@@ -146,9 +146,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ────────────────────────────────────────
-       6. EDUCATION — EXPANDABLE CARDS
+       6. EDUCATION — EXPANDABLE CARDS (Hover & Click)
     ──────────────────────────────────────── */
-    // Ora l'intero header della card risponde al click per un'esperienza touch migliore
     document.querySelectorAll('.edu-card-main').forEach(mainCard => {
         mainCard.addEventListener('click', () => {
             const card = mainCard.closest('.edu-card');
@@ -228,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (termPanel) termObs.observe(termPanel);
 
     /* ────────────────────────────────────────
-       8. GITHUB API
+       8. GITHUB API - FETCH REPOSITORIES
     ──────────────────────────────────────── */
     const LANG_COLORS = {
         JavaScript: '#f1e05a', Python: '#3572A5', C: '#555555',
@@ -256,14 +255,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const user  = await userRes.json();
             const repos = await reposRes.json();
 
-            // User info
+            // Aggiorna Informazioni Utente
             ghUsername.textContent  = user.login;
             ghRepos.textContent     = user.public_repos;
             ghFollowers.textContent = user.followers;
             ghFollowing.textContent = user.following;
             ghLink.href             = user.html_url;
 
-            // Repos grid
+            // Costruisci la griglia delle Repositories
             reposGrid.innerHTML = '';
             repos.slice(0, 6).forEach((repo, i) => {
                 const color   = LANG_COLORS[repo.language] || LANG_COLORS.default;
@@ -274,12 +273,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.target          = '_blank';
                 card.rel             = 'noopener';
                 card.style.animationDelay = `${i * 80}ms`;
+                
+                // Pulisce la descrizione per evitare "null"
+                const desc = repo.description || 'Nessuna descrizione disponibile per questa repository.';
+
                 card.innerHTML = `
                     <div class="repo-card-top">
                         <i class="fas fa-book-open"></i>
                         <span class="repo-name">${repo.name}</span>
                     </div>
-                    <p class="repo-desc">${repo.description || 'Nessuna descrizione'}</p>
+                    <p class="repo-desc">${desc}</p>
                     <div class="repo-meta">
                         ${repo.language ? `
                         <span class="repo-lang">
@@ -293,20 +296,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
         } catch (err) {
-            // GitHub API not reachable or user not found — show fallback
+            console.error("Errore nel caricamento dei dati GitHub:", err);
             reposGrid.innerHTML = `
                 <div style="grid-column:1/-1;font-size:.78rem;color:var(--text-dim);padding:1.5rem;
                     border:1px dashed var(--border);border-radius:4px;text-align:center;">
                     <i class="fab fa-github" style="font-size:1.5rem;margin-bottom:.5rem;display:block;color:var(--text-dim)"></i>
-                    Imposta il tuo username GitHub nel file <code style="color:var(--cyan)">script.js</code>
-                    alla variabile <code style="color:var(--cyan)">GITHUB_USERNAME</code>.
+                    Si è verificato un errore nel caricamento delle repositories di <code style="color:var(--cyan)">${GITHUB_USERNAME}</code>.
                 </div>`;
             ghUsername.textContent  = `@${GITHUB_USERNAME}`;
             document.getElementById('gh-profile-link').href = `https://github.com/${GITHUB_USERNAME}`;
         }
     }
 
-    // Lazy-load GitHub when section enters viewport
+    // Lazy-load GitHub quando la sezione entra nella visuale
     const ghObs = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) { loadGitHub(); ghObs.disconnect(); }
     }, { threshold: 0.05 });
